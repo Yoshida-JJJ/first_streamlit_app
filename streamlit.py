@@ -46,10 +46,8 @@ except URLError as e:
   streamlit.error()
 
 #Allow the end user to add a fruit to the list
-add_my_fruit = streamlit.text_input('What fruit would you like to add?')
-streamlit.write('Thanks for Adding ', add_my_fruit)
-
-streamlit.stop()
+#add_my_fruit = streamlit.text_input('What fruit would you like to add?')
+#streamlit.write('Thanks for Adding ', add_my_fruit)
 
 #streamlit.header("The Fruit load list contains:")
 streamlit.header("View Our Fruit List - Add Your Favorites!")
@@ -82,3 +80,4 @@ if streamlit.button('Add a Fruit to the List'):
 
     #streamlit.write('The user entered ', fruit_choice)
 
+#streamlit.stop()
