@@ -44,7 +44,13 @@ try:
     streamlit.dataframe(back_from_function)
 except URLError as e:
   streamlit.error()
-  
+
+#Allow the end user to add a fruit to the list
+add_my_fruit = streamlit.text_input('What fruit would you like to add?')
+streamlit.write('Thanks for Adding ', add_my_fruit)
+
+streamlit.stop()
+
 #streamlit.header("The Fruit load list contains:")
 streamlit.header("View Our Fruit List - Add Your Favorites!")
 #Snowflake-related functions
@@ -60,7 +66,6 @@ if streamlit.button('Get Fruit List'):
     my_cnx.close()
     streamlit.dataframe(my_data_rows) 
 
-#streamlit.stop()
 
 #Allow the end user to add a fruit to the list
 def insert_row_snowflake(new_fruit):
